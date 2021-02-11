@@ -10,7 +10,8 @@ RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
 		'iol':'https://rss.iol.io/iol/news',
 		'fox':'http://feeds.foxnews.com/foxnews/latest',
 		'reddit':'https://reddit.com/r/worldnews/.rss',
-		'de':'feeds.feedburner.com/daily-express-world-news'}
+		'de':'feeds.feedburner.com/daily-express-world-news',
+		'spain':'https://feeds.thelocal.com/rss/es'}
 
 @app.route("/")
 @app.route("/<publication>")
