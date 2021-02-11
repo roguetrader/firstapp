@@ -10,8 +10,8 @@ wsb = 'https://feeds.bbci.co.uk/news/rss.xml'
 @app.route("/")
 def Get_feed():
         d=feedparser.parse(wsb)
-	for i range (10):
-	        first_article = d['entries'][1]
+	for i range(10):
+	        first_article = d['entries'][i]
         		return  """<html>
 			<body><h1> Feed Parsing</h1>
 				<b>{0}</b></br>
