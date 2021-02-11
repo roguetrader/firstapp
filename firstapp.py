@@ -23,6 +23,10 @@ def cnn():
 def iol():
 	return get_news('iol')
 
+@app.route("/cnn")
+def cnn():
+	return get_news('cnn')
+
 def get_news(publication):
         feed=feedparser.parse(RSS_FEEDS[publication])
         first_article = feed['entries'][0]
