@@ -11,7 +11,8 @@ RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
 		'fox':'http://feeds.foxnews.com/foxnews/latest',
 		'reddit':'https://reddit.com/r/worldnews/.rss',
 		'de':'feeds.feedburner.com/daily-express-world-news',
-		'spain':'https://feeds.thelocal.com/rss/es'}
+		'spain':'https://feeds.thelocal.com/rss/es',
+		'World':'https://blog.feedspot.com/world_news_rss_feeds/'}
 
 @app.route("/")
 @app.route("/<publication>")
