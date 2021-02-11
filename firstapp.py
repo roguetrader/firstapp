@@ -11,7 +11,7 @@ def Get_feed():
         d=feedparser.parse(wsb)
         first_article = d['entries'][0]
         return  """<html>
-		<body><h1> WallStreet Bets Reddit Barton</h1>
+		<body><h1> WallStreet Bets Reddit Barton Family</h1>
 			<b>{0}</b></br>
 			<i>{1}</i></br>
 			<p>{2}</p>
