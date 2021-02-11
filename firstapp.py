@@ -14,9 +14,9 @@ RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
 def bbc():
 	return get_news('bbc')
 
-@app.route("/cnn")
+@app.route("/fox")
 def cnn():
-	return get_news('cnn')
+	return get_news('fox')
 
 def get_news(publication):
         feed=feedparser.parse(RSS_FEEDS[publication])
