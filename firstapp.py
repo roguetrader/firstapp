@@ -19,5 +19,5 @@ def Get_feed():
 	</html>""".format(first_article.get('title'), first_article.get('summary'),first_article.get('subtitle'))
 
 if __name__ == '__main__':
-        app.run(host='0,0,0,0' debug=True)
+        app.run()
 
