@@ -8,7 +8,8 @@ app = Flask(__name__)
 RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
 		'cnn':'http://rss.cnn.com/rss/edition.rss',
 		'iol':'https://rss.iol.io/iol/news',
-		'fox':'http://feeds.foxnews.com/foxnews/latest'}
+		'fox':'http://feeds.foxnews.com/foxnews/latest',
+		'reddit':'https://reddit.com/r/worldnews/.rss'}
 
 @app.route("/")
 @app.route("/<publication>")
