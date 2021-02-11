@@ -12,7 +12,8 @@ RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
 		'reddit':'https://reddit.com/r/worldnews/.rss',
 		'de':'feeds.feedburner.com/daily-express-world-news',
 		'spain':'https://feeds.thelocal.com/rss/es',
-		'world':'https://world.wng.org/taxonomy/term/72/feed'}
+		'world':'https://world.wng.org/taxonomy/term/72/feed',
+		'patriot':'https://patriotrising.com/feed'}
 
 @app.route("/")
 @app.route("/<publication>")
