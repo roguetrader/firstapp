@@ -13,8 +13,11 @@ def Get_feed():
         return  """<html>
 		<body><h1> WallStreet Bets Reddit Barton Family</h1>
 			<b>{0}</b></br>
+			<p>title</p>
 			<i>{1}</i></br>
+			<p>Summary</p>
 			<p>{2}</p>
+			<p>subtitle</p>
 		</body>
 	</html>""".format(first_article.get('title'), first_article.get('summary'),first_article.get('subtitle'))
 
