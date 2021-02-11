@@ -19,7 +19,7 @@ def bbc():
 def cnn():
 	return get_news('fox')
 
-@app.route("iol")
+@app.route("/iol")
 def iol():
 	return get_news('iol')
 
