@@ -7,7 +7,7 @@ app = Flask(__name__)
 #wsb = 'https://reddit.com/r/wallstreetbets/.rss'
 RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
 		'cnn':'http://rss.cnn.com/rss/edition.rss',
-		'iol':'https://rss.iol.io/iol/news'
+		'iol':'https://rss.iol.io/iol/news',
 		'fox':'http://feeds.foxnews.com/foxnews/latest'}
 
 @app.route("/")
