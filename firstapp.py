@@ -9,7 +9,7 @@ wsb = 'https://reddit.com/r/wallstreetbets/.rss'
 @app.route("/")
 def Get_feed():
         d=feedparser.parse(wsb)
-        first_article = d['entries'][1]
+        first_article = d['entries'][2]
         return  """<html>
 		<body><h1> WallStreet Bets Reddit Barton Family</h1>
 			<b>{0}</b></br>
