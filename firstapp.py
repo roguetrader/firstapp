@@ -12,7 +12,7 @@ RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
 		'reddit':'https://reddit.com/r/worldnews/.rss',
 		'de':'feeds.feedburner.com/daily-express-world-news',
 		'spain':'https://feeds.thelocal.com/rss/es',
-		'World':'https://blog.feedspot.com/world_news_rss_feeds/'}
+		'world':'https://world.wng.org/taxonomy/term/72/feed'}
 
 @app.route("/")
 @app.route("/<publication>")
