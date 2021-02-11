@@ -16,7 +16,7 @@ def bbc():
 	return get_news('bbc')
 
 @app.route("/fox")
-def cnn():
+def fox():
 	return get_news('fox')
 
 @app.route("/iol")
