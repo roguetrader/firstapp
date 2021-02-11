@@ -4,12 +4,13 @@ from flask import Flask
 
 app = Flask(__name__)
 
-wsb = 'https://reddit.com/r/wallstreetbets/.rss'
+#wsb = 'https://reddit.com/r/wallstreetbets/.rss'
+wsb = 'https://feeds.bbci.co.uk/news/rss.xml'
 
 @app.route("/")
 def Get_feed():
         d=feedparser.parse(wsb)
-        first_article = d['entries'][2]
+        first_article = d['entries'][0]
         return  """<html>
 		<body><h1> WallStreet Bets Reddit Barton Family</h1>
 			<b>{0}</b></br>
