@@ -5,13 +5,22 @@ from flask import Flask
 app = Flask(__name__)
 
 #wsb = 'https://reddit.com/r/wallstreetbets/.rss'
-wsb = 'https://feeds.bbci.co.uk/news/rss.xml'
+RSS_FEEDS = {'bbc':'https://feeds.bbci.co.uk/news/rss.xml',
+		'cnn':'http://rss.cnn.com/rss/edition.rss',
+		'fox':'https://rss.iol.io/iol/news'}
 
 @app.route("/")
-def Get_feed():
-        d=feedparser.parse(wsb)
+@app.route("/bbc")
+def bbc():
+	return get_news('bbc')
 
-        first_article = d['entries'][0]
+@app.route("/cnn")
+def cnn():
+	return get_news('cnn')
+
+def get_news(publication):
+        feed=feedparser.parse(RSS_FEEDS[publication])
+        first_article = feed['entries'][0]
        	return  """<html>
 		<body><h1> Feed Parsing</h1>
 			<b>{0}</b></br>
