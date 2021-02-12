@@ -25,7 +25,6 @@ def get_news():
 		publication  = query.lower()
 
 	feed=feedparser.parse(RSS_FEEDS[publication])
-        first_article = feed['entries'][0]
        	return  render_template("home.html", articles=feed['entries'])
 
 if __name__ == '__main__':
