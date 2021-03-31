@@ -2,6 +2,7 @@ import feedparser
 from flask import Flask
 from flask import render_template
 from flask import request
+import requests
 
 app = Flask(__name__)
 
@@ -25,8 +26,19 @@ def get_news():
 		publication  = query.lower()
 
 	feed=feedparser.parse(RSS_FEEDS[publication])
-	return  render_template("home.html", articles=feed['entries'])
+	weather = get_weather("Carbis Bay")
+	return  render_template("home.html", articles=feed['entries'], weather=weather)
+
+def get_weather(city):
+	api_key = "e3c9be28afcfde329e3380cb81c88742"
+	base_url = "http://api.openweathermap.org/data/2.5/weather?"
+#	city_name = "Carbis Bay"
+	Final_Url = base_url + "appid=" + api_key + "&q=" +  city
+	weather_data = requests.get(Final_Url).json()
+	weather = None
+	if weather_data.get("weather"):
+		weather = {"description":weather_data["weather"][0]["description"],"temperature":weather_data["main"]["temp"],"city":weather_data["name"]}
+	return weather
 
 if __name__ == '__main__':
         app.run()
-
