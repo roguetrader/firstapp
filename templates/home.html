@@ -6,6 +6,7 @@
 		<input type="submit" value = "Submit" />
 	</form>
 	<h1>Headlines</h1>
+	<h2>Current Weather</h2>
 	{% for article in articles %}
 		<b><a href="{{article.link}}">{{article.title}}</a></b><br />
 		<b>{{article.link}}</b><br />
